@@ -154,7 +154,7 @@ guillaume@ubuntu:~/0x01$
 ```
 
 
-9. There are only 3 colors, 10 digits, and 7 notes; it's what we do with them that's important
+#  9. There are only 3 colors, 10 digits, and 7 notes; it's what we do with them that's important
 
 Write a function that prints the last digit of a number.
 
@@ -180,7 +180,7 @@ guillaume@ubuntu:~/0x01$
 ```
 
 
-10. a + b
+#  10. a + b
 
 Write a function that adds two integers and returns the result.
 
@@ -207,7 +207,7 @@ guillaume@ubuntu:~/0x01$
 ```
 
 
-11. a ^ b
+#  11. a ^ b
 
 Write a function that computes `a` to the power of `b` and return the value.
 
@@ -238,7 +238,7 @@ guillaume@ubuntu:~/0x01$
 ```
 
 
-12. Fizz Buzz
+#  12. Fizz Buzz
 
 Write a function that prints the numbers from 1 to 100 separated by a space.
 
@@ -283,17 +283,17 @@ carrie@ubuntu:0x01$ cat lists.h
 
 /**
  * struct listint_s - singly linked list
-  * @n: integer
-   * @next: points to the next node
-    *
-     * Description: singly linked list node structure
-      *
-       */
-       typedef struct listint_s
-       {
-           int n;
-	       struct listint_s *next;
-	       } listint_t;
+ * @n: integer
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
+ *
+ */
+typedef struct listint_s
+{
+	int n;
+	struct listint_s *next;
+} listint_t;
 
 size_t print_listint(const listint_t *h);
 listint_t *add_nodeint_end(listint_t **head, const int n);
@@ -485,7 +485,7 @@ guillaume@ubuntu:~/0x01$
 ```
 
 
-#16. ByteCode -> Python #2
+#  16. ByteCode -> Python #2
 
 Write the Python function `def magic_calculation(a, b, c):` that does exactly the same as the following Python bytecode:
 
