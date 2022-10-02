@@ -539,7 +539,9 @@ guillaume@ubuntu:~/0x04$
 #  16. CPython #1: PyBytesObject
 
 Create two C functions that print some basic info about Python lists and Python bytes objects
+
 ![Monty Python](https://github.com/Okinbird/Okinbird/blob/master/monty%20python.gif)
+
 Python lists:
 
 *  Prototype: `void print_python_list(PyObject *p);`
