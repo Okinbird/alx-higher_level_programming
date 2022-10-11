@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Define classes for a singly-linked list"""
 
 
 class Node:
@@ -86,29 +87,28 @@ class SinglyLinkedList:
             None
         """
         new = Node(value)
-        tmp = self.__head
-        if tmp is None or tmp.data >= value:
-            if tmp:
-                new.next_node = tmp
-                self.__head = new
-                return
-        while tmp.next_node is not None:
-            if tmp.next_node.data >= value:
-                break
-            tmp = tmp.next_node
-            new.next_node = tmp.next_node
-            tmp.next_node = new
+        if self.__head is None:
+            new.next_node = None
+            self.__head = new
+        elif self.__head.data > value:
+            new.next_node = self.__head
+            self.__head = new
+        else:
+            tmp = self.__head
+            while (tmp.next_node is not None and
+                   tmp.next_node.data < value):
+                tmp = tmp.next_node
+                new.next_node = tmp.next_node
+                tmp.next_node = new
 
     def __str__(self):
         """String representation of SinglyLinkedList instance
         Returns:
             Formatted string representing the linked list
         """
-        string = ""
+        values = []
         tmp = self.__head
         while tmp is not None:
-            string += str(tmp)
-            if tmp.next_node is not None:
-                string += "\n"
+            values.append(str(tmp.data))
             tmp = tmp.next_node
-        return string
+        return ('\n'.join(values))
