@@ -40,7 +40,7 @@ class Square:
         elif size < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-        
+
     def area(self):
         """Calculates the square's area
 
@@ -48,7 +48,7 @@ class Square:
             The area of the square
         """
         return (self.__size) ** 2
-    
+
     def my_print(self):
         """Print the square with the # character."""
         for i in range(0, self.__size):
