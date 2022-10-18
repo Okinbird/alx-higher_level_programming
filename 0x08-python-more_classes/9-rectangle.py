@@ -49,9 +49,9 @@ class Rectangle:
     def height(self, value):
         """setter for the private instance attribute height"""
         if type(value) is not int:
-            raise Exception TypeError("height must be an integer")
+            raise TypeError("height must be an integer")
         if value < 0:
-            raise Exception ValueError("height must be >= 0")
+            raise ValueError("height must be >= 0")
         self.__height = value
 
     @staticmethod
@@ -65,11 +65,9 @@ class Rectangle:
             TypeError: If either of rect_1 or rect_2 is not a Rectangle.
         """
         if type(rect_1) is not Rectangle:
-            raise Exception TypeError
-            ("rect_1 must be an instance of Rectangle")
+            raise TypeError("rect_1 must be an instance of Rectangle")
         if type(rect_2) is not Rectangle:
-            raise Exception TypeError
-            ("rect_2 must be an instance of Rectangle")
+            raise TypeError("rect_2 must be an instance of Rectangle")
         if rect_1.area() >= rect_2.area():
             return (rect_1)
         return (rect_2)
