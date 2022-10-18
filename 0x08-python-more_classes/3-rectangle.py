@@ -3,6 +3,7 @@
 Defines a class Rectangle
 """
 
+
 class Rectangle:
     """Representation of a rectangle"""
     def __init__(self, width=0, height=0):
@@ -54,7 +55,7 @@ class Rectangle:
 
     def __str__(self):
         """Return the printable representation of the Rectangle.
-        
+
         Represents the rectangle with the # character.
         """
         if self.__width == 0 or self.__height == 0:
