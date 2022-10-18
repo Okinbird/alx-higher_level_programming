@@ -71,7 +71,7 @@ class Rectangle:
         if rect_1.area() >= rect_2.area():
             return (rect_1)
         return (rect_2)
-        
+
     def area(self):
         """Return the area of the Rectangle."""
         return (self.__width * self.__height)
