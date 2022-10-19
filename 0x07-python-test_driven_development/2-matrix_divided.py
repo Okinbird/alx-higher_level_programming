@@ -37,11 +37,10 @@ def matrix_divided(matrix, div):
             if type(element) is not int and type(element) is not float:
                 raise TypeError("matrix must be a matrix (list of lists) of \
 integers/floats")
-            
+
     if type(div) is not int and type(div) is not float:
         raise TypeError("div must be a number")
     elif div == 0:
         raise ZeroDivisionError("division by zero")
 
     return [[round(b / div, 2) for b in i] for i in matrix]
-        
