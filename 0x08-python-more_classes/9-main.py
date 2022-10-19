@@ -13,12 +13,14 @@ print("{} / {}".format(mysquare.width, my_square.height))
 print()
 
 mysquare = Rectangle.square(-2)
-print("{} / {}".format(mysquare.width, mysquare.height))
+try:
+    print("{} / {}".format(mysquare.width, mysquare.height))
 except Exception as e:
-    print("[{}] {}".format(e.class.name_, e))
-print()
+    print("[{}] {}".format(e.__class__.__name__, e))
+    print()
 
 mysquare = Rectangle.square("12")
-print("{} / {}".format(mysquare.width, mysquare.height))
+try:
+    print("{} / {}".format(mysquare.width, mysquare.height))
 except Exception as e:
-    print("[{}] {}".format(e.class.name_, e))
+    print("[{}] {}".format(e.__class__.__name__, e))
