@@ -211,3 +211,11 @@ Passing True and False
     >>> say_my_name("Bob", False)
     Traceback (most recent call last):
     TypeError: last_name must be a string
+
+    >>> say_my_name("Bob" / 12)
+    Traceback (most recent call last):
+    TypeError: unsupported operand type(s) for /: 'int' and 'str'
+
+     >>> say_my_name(12 / "Lenon")
+     Traceback (most recent call last):
+     TypeError: unsupported operand type(s) for /: 'int' and 'str'
