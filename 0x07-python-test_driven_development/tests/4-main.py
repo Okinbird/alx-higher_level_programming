@@ -13,4 +13,13 @@ try:
     print_square(-1)
 except Exception as e:
     print(e)
-    print("")
+print("")
+
+try:
+    print_square(True)
+except Exception as e:
+    print(e)
+print("")
+
+
+print_square(9999)
