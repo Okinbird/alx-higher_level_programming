@@ -48,7 +48,7 @@ With spaces
     My name is John  Lenon
 
     >>> say_my_name("John ", "Lenon ")
-    My name is John  Lenon
+    My name is John  Lenon 
 
 Empty strings
 
