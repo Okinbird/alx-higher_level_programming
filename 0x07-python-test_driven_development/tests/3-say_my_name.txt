@@ -48,7 +48,7 @@ Checking for normal use:
 	 My name is You know nothing John Snow
 
 Checking for 1 arg:
-	 >>> say_my_name("Hello")
+	 >>> say_my_name("Hello", "")
 	 My name is Hello
 
 Checking for more than 2 args:
