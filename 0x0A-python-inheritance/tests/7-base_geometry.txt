@@ -24,14 +24,6 @@ with no arguments.
     >>> print(bg) # doctest: +ELLIPSIS
     <7-base_geometry.BaseGeometry object at ...>
 
-In fact, any arguments supplied to an instantiation of ``BaseGeometry`` results
-in a TypeError.
-
-::
-
-    >>> bg = BaseGeometry(None)
-    Traceback (most recent call last):
-    TypeError: object() takes no parameters
 
 Methods
 =======
