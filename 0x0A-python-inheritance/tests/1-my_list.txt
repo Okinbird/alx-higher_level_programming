@@ -5,7 +5,8 @@ Using ``MyList``
 -------------------
 
 Importing the function from the module:
-        >>> MyList = __import__("1-my_list").MyList
+         >>> MyList = __import__("1-my_list").MyList
+	 >>> type(my_list)
 
 Checking for module docstring:
          >>> m = __import__("1-my_list").__doc__
