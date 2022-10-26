@@ -122,25 +122,25 @@ Note that lists of strings are sorted lexographically.
 ::
 
     >>> my_list = MyList()
-    >>> my_list.append("Brennan")
-    >>> my_list.append("Poppy")
+    >>> my_list.append("Olayinka")
+    >>> my_list.append("Lemon")
     >>> my_list.append("School")
-    >>> my_list.append("Holberton")
+    >>> my_list.append("Best")
     >>> my_list.append("Betty")
     >>> print(my_list)
-    ['Brennan', 'Poppy', 'School', 'Holberton', 'Betty']
+    ['Olayinka', 'Lemon', 'School', 'Best', 'Betty']
 
 ::
 
     >>> my_list.print_sorted()
-    ['Betty', 'Brennan', 'Holberton', 'Poppy', 'School']
+    ['Best', 'Betty', 'Lemon', 'Olayinka', 'School']
 
 Another friendly reminder that the original list is unaltered :)
 
 ::
 
     >>> print(my_list)
-    ['Brennan', 'Poppy', 'School', 'Holberton', 'Betty']
+    ['Olayinka', 'Lemon', 'School', 'Best', 'Betty']
 
 Nothing to sort with empty lists.
 
