@@ -13,5 +13,5 @@ if __name__ == "__main__":
         items = []
     for arg in argv[1:]:
         items.append(arg)
-        
+
     save_to_json_file(items, "add_item.json")
