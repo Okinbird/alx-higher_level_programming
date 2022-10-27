@@ -89,7 +89,6 @@ Write a function that multiplies 2 matrices:
 *  `m_a` and `m_b` must be validated with these requirements in this order
 
 *  `m_a` and `m_b` must be an list of lists of integers or floats:
-
        -  if `m_a` or `m_b` is not a list: raise a `TypeError` exception with the message `m_a must be a list` or `m_b must be a list`
        -  if `m_a` or `m_b` is not a list of lists: raise a `TypeError` exception with the message `m_a must be a list of lists` or `m_b must be a list of lists`
        -  if `m_a` or `m_b` is empty (it means: `= []` or `= [[]]`): raise a `ValueError` exception with the message `m_a can't be empty` or `m_b can't be empty`
