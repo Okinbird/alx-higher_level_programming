@@ -85,9 +85,7 @@ Write a function that multiplies 2 matrices:
 *  Read: [Matrix multiplication - only Matrix product (two matrices)](https://alx-intranet.hbtn.io/rltoken/Qw_rYR3lYYL5DHDH-iCWCA)
 
 *  Prototype: `def matrix_mul(m_a, m_b):`
-
 *  `m_a` and `m_b` must be validated with these requirements in this order
-
 *  `m_a` and `m_b` must be an list of lists of integers or floats:
        -  if `m_a` or `m_b` is not a list: raise a `TypeError` exception with the message `m_a must be a list` or `m_b must be a list`
        -  if `m_a` or `m_b` is not a list of lists: raise a `TypeError` exception with the message `m_a must be a list of lists` or `m_b must be a list of lists`
