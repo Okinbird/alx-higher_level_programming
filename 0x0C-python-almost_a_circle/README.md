@@ -151,3 +151,32 @@ Update the class `Square` by adding the public method `def update(self, *args, *
 *  `**kwargs` can be thought of as a double pointer to a dictionary: key/value (keyworded arguments)
 *  `**kwargs` must be skipped if *args exists and is not empty
 *  Each key in this dictionary represents an attribute to the instance
+
+
+
+#  13. Rectangle instance to dictionary representation
+
+Update the class `Rectangle` by adding the public method `def to_dictionary(self):` that returns the dictionary representation of a `Rectangle`:
+
+This dictionary must contain:
+
+*  `id`
+*  `width`
+*  `height`
+*  `x`
+*  `y`
+
+
+
+#  14. Square instance to dictionary representation
+
+Update the class `Square` by adding the public method `def to_dictionary(self):` that returns the dictionary representation of a `Square`:
+
+This dictionary must contain:
+
+*  `id`
+*  `size`
+*  `x`
+*  `y`
+
+
