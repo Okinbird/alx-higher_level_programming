@@ -80,3 +80,7 @@ Update the class `Rectangle` by adding the public method `def display(self):` th
 Update the class `Rectangle` by overriding the `__str__` method so that it returns `[Rectangle] (<id>) <x>/<y> - <width>/<height>`
 
 
+
+#  7. Display #1
+
+Update the class `Rectangle` by improving the public method `def display(self):` to print in stdout the `Rectangle` instance with the character `#` by taking care of `x` and `y`
