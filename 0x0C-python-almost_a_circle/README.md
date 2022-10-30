@@ -84,3 +84,30 @@ Update the class `Rectangle` by overriding the `__str__` method so that it retur
 #  7. Display #1
 
 Update the class `Rectangle` by improving the public method `def display(self):` to print in stdout the `Rectangle` instance with the character `#` by taking care of `x` and `y`
+
+
+
+#  8. Update #0
+
+Update the class `Rectangle` by adding the public method `def update(self, *args):` that assigns an argument to each attribute:
+
+*  1st argument should be the `id` attribute
+*  2nd argument should be the `width` attribute
+*  3rd argument should be the `height` attribute
+*  4th argument should be the `x` attribute
+*  5th argument should be the `y` attribute
+
+This type of argument is called a “no-keyword argument” - Argument order is super important.
+
+
+
+#  9. Update #1
+
+Update the class `Rectangle` by updating the public method `def update(self, *args):` by changing the prototype to `update(self, *args, **kwargs)` that assigns a key/value argument to attributes:
+
+*  `**kwargs` can be thought of as a double pointer to a dictionary: key/value
+   -  As Python doesn’t have pointers, `**kwargs` is not literally a double pointer – describing it as such is just a way of explaining its behavior in terms you’re already familiar with
+*  `**kwargs must be skipped if `*args` exists and is not empty
+*  Each key in this dictionary represents an attribute to the instance
+
+This type of argument is called a “key-worded argument”. Argument order is not important.
