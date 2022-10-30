@@ -72,3 +72,11 @@ Update the class `Rectangle` by adding validation of all setter methods and inst
 #  5. Display #0
 
 Update the class `Rectangle` by adding the public method `def display(self):` that prints in stdout the `Rectangle` instance with the character `#` - you don’t need to handle `x` and `y` here.
+
+
+
+#  6. __str__
+
+Update the class `Rectangle` by overriding the `__str__` method so that it returns `[Rectangle] (<id>) <x>/<y> - <width>/<height>`
+
+
