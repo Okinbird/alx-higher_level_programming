@@ -58,3 +58,12 @@ Why private attributes with getter/setter? Why not directly public attribute?
 Because we want to protect attributes of our class. With a setter, you are able to validate what a developer is trying to assign to a variable. So after, in your class you can “trust” these attributes.
 
 
+
+#  3. Validate attributes
+
+Update the class `Rectangle` by adding validation of all setter methods and instantiation (`id` excluded):
+
+*  If the input is not an integer, raise the `TypeError` exception with the message: `<name of the attribute> must be an integer`. Example: `width must be an integer`
+*  If `width` or `height` is under or equals 0, raise the `ValueError` exception with the message: `<name of the attribute> must be > 0`. Example: `width must be > 0`
+*  If `x` or `y` is under 0, raise the `ValueError` exception with the message: `<name of the attribute> must be >= 0`. Example: `x must be >= 0`
+	    
