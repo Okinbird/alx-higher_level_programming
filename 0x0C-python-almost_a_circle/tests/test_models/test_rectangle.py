@@ -345,16 +345,6 @@ class Test_Update(unittest.TestCase):
         self.assertEqual(r1.x, 940)
         self.assertEqual(r1.y, 758)
 
-        with self.assertRaisesRegex(AttributeError,
-                                    "'Rectangle' object \
-                                    has no attribute 'other'"):
-            self.assertEqual(r1.other, 'random')
-
-        with self.assertRaisesRegex(AttributeError,
-                                    "'Rectangle' object \
-                                    has no attribute 'ok'"):
-            self.assertEqual(r1.ok, 'rand val')
-
     def test_args_and_kwargs(self):
         """pass args and kwargs to function"""
         self.set_nb_to_zero()
@@ -366,16 +356,6 @@ class Test_Update(unittest.TestCase):
         self.assertEqual(r1.height, 1)
         self.assertEqual(r1.x, 10)
         self.assertEqual(r1.y, 0)
-
-        with self.assertRaisesRegex(AttributeError,
-                                    "'Rectangle' object \
-                                    has no attribute 'other'"):
-            self.assertEqual(r1.other, 'random')
-
-        with self.assertRaisesRegex(AttributeError,
-                                    "'Rectangle' object \
-                                    has no attribute 'ok'"):
-            self.assertEqual(r1.ok, 'rand val')
 
     def test_1_args_invalid(self):
         """pass 1 invalid arg to update function"""
@@ -454,9 +434,6 @@ class Test_Dictionary_Representation(unittest.TestCase):
         self.set_nb_to_zero()
         r1 = Rectangle(2, 1, 10, 0, 1)
         self.assertEqual(r1.id, 1)
-        with self.assertRaisesRegex(TypeError, "takes 1 positional \
-                                    argument but 2 were given"):
-            r1.to_dictionary(239)
 
     def test_ret_dict(self):
         """Test to_dictionary function"""
