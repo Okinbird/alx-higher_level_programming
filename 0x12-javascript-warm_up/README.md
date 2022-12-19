@@ -34,3 +34,17 @@ Write a script that prints a message depending of the number of arguments passed
 *   You are not allowed to use `var`
 
 Reference: [process.argv](https://alx-intranet.hbtn.io/rltoken/5kTYi3rxb6KM1_pivm-tXg)
+
+
+
+#   3. Value of my argument
+
+Write a script that prints the first argument passed to it:
+
+*   If no arguments are passed to the script, print “No argument”
+*   You must use `console.log(...)` to print all output
+*   You are not allowed to use `var`
+*   You are not allowed to use `length`
+
+
+
