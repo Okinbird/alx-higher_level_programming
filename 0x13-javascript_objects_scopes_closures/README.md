@@ -113,3 +113,40 @@ Write a function that converts a number from base 10 to another base passed as a
 *   Prototype: `exports.converter = function (base)`
 *   You are not allowed to import any file
 *   You are not allowed to declare any new variable (`var`, `let`, etc..)
+
+
+
+#   11. Factor index
+
+Write a script that imports an array and computes a new array.
+
+*   Your script must import `list` from the file `100-data.js`
+*   You must use a `map`. [Tips](https://alx-intranet.hbtn.io/rltoken/LOEW51ZbYDjO4KZCFevzNQ)
+*   A new list must be created with each value equal to the value of the initial list, multipled by the index in the list
+*   Print both the initial list and the new list
+
+
+
+#   12. Sorted occurences
+
+Write a script that imports a dictionary of occurrences by user id and computes a dictionary of user ids by occurrence.
+
+*   Your script must import `dict` from the file `101-data.js`
+*   In the new dictionary:
+    -   A key is a number of occurrences
+    -   A value is the list of user ids
+*   Print the new dictionary at the end
+
+
+
+
+#   13. Concat files
+
+Write a script that concats 2 files.
+
+*   The first argument is the file path of the first source file
+*   The second argument is the file path of the second source file
+*   The third argument is the file path of the destination
+
+
+
