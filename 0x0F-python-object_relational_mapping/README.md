@@ -202,3 +202,160 @@ guillaume@ubuntu:~/0x0F$
 ```
 
 
+#   9. Contains `a`
+
+Write a script that lists all `State` objects that contain the letter a from the database hbtn_0e_6_usa
+
+*   Your script should take 3 arguments: `mysql username`, `mysql password` and `database name`
+*   You must use the module `SQLAlchemy`
+*   You must import `State` and `Base` from `model_state` - `from model_state import Base, State`
+*   Your script should connect to a MySQL server running on `localhost` at port `3306`
+*   Results must be sorted in ascending order by `states.id`
+*   The results must be displayed as they are in the example below
+*   Your code should not be executed when imported
+
+```
+guillaume@ubuntu:~/0x0F$ ./9-model_state_filter_a.py root root hbtn_0e_6_usa
+1: California
+2: Arizona
+3: Texas
+5: Nevada
+guillaume@ubuntu:~/0x0F$ 
+```
+
+
+#   10. Get a state
+
+Write a script that prints the `State` object with the name passed as argument from the database hbtn_0e_6_usa
+
+*   Your script should take 4 arguments: `mysql username`, `mysql password`, `database name` and `state name to search` (SQL injection free)
+*   You must use the module `SQLAlchemy`
+*   You must import `State` and `Base` from `model_state` - `from model_state import Base, State`
+*   Your script should connect to a MySQL server running on `localhost` at port `3306`
+*   You can assume you have one record with the state name to search
+*   Results must display the `states.id`
+*   If no state has the name you searched for, display `Not found`
+*   Your code should not be executed when imported
+
+```
+guillaume@ubuntu:~/0x0F$ ./10-model_state_my_get.py root root hbtn_0e_6_usa Texas
+3
+guillaume@ubuntu:~/0x0F$ ./10-model_state_my_get.py root root hbtn_0e_6_usa Illinois
+Not found
+guillaume@ubuntu:~/0x0F$ 
+```
+
+
+#   11. Add a new state
+
+Write a script that adds the `State` object “Louisiana” to the database `hbtn_0e_6_usa`
+
+*   Your script should take 3 arguments: `mysql username`, `mysql password` and `database name`
+*   You must use the module `SQLAlchemy`
+*   You must import `State` and `Base` from `model_state` - `from model_state import Base, State`
+*   Your script should connect to a MySQL server running on `localhost` at port `3306`
+*   Print the new `states.id` after creation
+*   Your code should not be executed when imported
+
+```
+guillaume@ubuntu:~/0x0F$ ./11-model_state_insert.py root root hbtn_0e_6_usa 
+6
+guillaume@ubuntu:~/0x0F$ ./7-model_state_fetch_all.py root root hbtn_0e_6_usa 
+1: California
+2: Arizona
+3: Texas
+4: New York
+5: Nevada
+6: Louisiana
+guillaume@ubuntu:~/0x0F$ 
+```
+
+
+#   12. Update a state
+
+Write a script that changes the name of a `State` object from the database `hbtn_0e_6_usa`
+
+*   Your script should take 3 arguments: `mysql username`, `mysql password` and `database name`
+*   You must use the module `SQLAlchemy`
+*   You must import `State` and `Base` from `model_state` - `from model_state import Base, State`
+*   Your script should connect to a MySQL server running on `localhost` at port `3306`
+*   Change the name of the `State` where `id = 2` to `New Mexico`
+*   Your code should not be executed when imported
+
+```
+guillaume@ubuntu:~/0x0F$ ./12-model_state_update_id_2.py root root hbtn_0e_6_usa 
+guillaume@ubuntu:~/0x0F$ ./7-model_state_fetch_all.py root root hbtn_0e_6_usa 
+1: California
+2: New Mexico
+3: Texas
+4: New York
+5: Nevada
+6: Louisiana
+guillaume@ubuntu:~/0x0F$ 
+```
+
+
+#   13. Delete states
+
+Write a script that deletes all `State` objects with a name containing the letter `a` from the database `hbtn_0e_6_usa`
+
+*   Your script should take 3 arguments: `mysql username`, `mysql password` and `database name`
+*   You must use the module `SQLAlchemy`
+*   You must import `State` and `Base` from `model_state` - `from model_state import Base, State`
+*   Your script should connect to a MySQL server running on `localhost` at port `3306`
+*   Your code should not be executed when imported
+
+```
+guillaume@ubuntu:~/0x0F$ ./13-model_state_delete_a.py root root hbtn_0e_6_usa 
+guillaume@ubuntu:~/0x0F$ ./7-model_state_fetch_all.py root root hbtn_0e_6_usa 
+2: New Mexico
+4: New York
+guillaume@ubuntu:~/0x0F$ 
+```
+
+
+#   14. Cities in state
+
+Write a Python file similar to `model_state.py` named `model_city.py` that contains the class definition of a `City`.
+
+*   `City` class:
+    -   inherits from `Base` (imported from `model_state`)
+    -   links to the MySQL table `cities`
+    -   class attribute `id` that represents a column of an auto-generated, unique integer, can’t be null and is a primary key
+    -   class attribute `name` that represents a column of a string of 128 characters and can’t be null
+    -   class attribute `state_id` that represents a column of an integer, can’t be null and is a foreign key to `states.id`
+*   You must use the module `SQLAlchemy`
+
+Next, write a script `14-model_city_fetch_by_state.py` that prints all `City` objects from the database `hbtn_0e_14_usa`:
+
+*   Your script should take 3 arguments: `mysql username`, `mysql password` and `database name`
+*   You must use the module `SQLAlchemy`
+*   You must import `State` and `Base` from `model_state` - `from model_state import Base, State`
+*   Your script should connect to a MySQL server running on `localhost` at port `3306`
+*   Results must be sorted in ascending order by `cities.id`
+*   Results must be display as they are in the example below (`<state name>: (<city id>) <city name>`)
+*   Your code should not be executed when imported
+
+```
+guillaume@ubuntu:~/0x0F$ cat 14-model_city_fetch_by_state.sql | mysql -uroot -p
+Enter password: 
+guillaume@ubuntu:~/0x0F$ ./14-model_city_fetch_by_state.py root root hbtn_0e_14_usa
+California: (1) San Francisco
+California: (2) San Jose
+California: (3) Los Angeles
+California: (4) Fremont
+California: (5) Livermore
+Arizona: (6) Page
+Arizona: (7) Phoenix
+Texas: (8) Dallas
+Texas: (9) Houston
+Texas: (10) Austin
+New York: (11) New York
+Nevada: (12) Las Vegas
+Nevada: (13) Reno
+Nevada: (14) Henderson
+Nevada: (15) Carson City
+guillaume@ubuntu:~/0x0F$
+```
+
+
