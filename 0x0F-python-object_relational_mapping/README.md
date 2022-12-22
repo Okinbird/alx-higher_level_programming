@@ -359,3 +359,119 @@ guillaume@ubuntu:~/0x0F$
 ```
 
 
+#   15. City relationship
+
+Improve the files `model_city.py` and `model_state.py`, and save them as `relationship_city.py` and `relationship_state.py`:
+
+*   `City` class:
+    -   No change
+*   `State` class:
+    -   In addition to previous requirements, the class attribute `cities` must represent a relationship with the class `City`. If the `State` object is deleted, all linked `City` objects must be automatically deleted. Also, the reference from a `City` object to his `State` should be named `state`
+*   You must use the module `SQLAlchemy`
+
+Write a script that creates the `State` “California” with the `City` “San Francisco” from the database `hbtn_0e_100_usa`: (`100-relationship_states_cities.py`)
+
+*   Your script should take 3 arguments: `mysql username`, `mysql password` and `database name`
+*   You must use the module `SQLAlchemy`
+*   Your script should connect to a MySQL server running on `localhost` at port `3306`
+*   You must use the `cities` relationship for all `State` objects
+*   Your code should not be executed when imported
+
+```
+guillaume@ubuntu:~/0x0F$ cat 100-relationship_states_cities.sql | mysql -uroot -p
+Enter password: 
+ERROR 1146 (42S02) at line 5: Table 'hbtn_0e_100_usa.states' doesn't exist
+guillaume@ubuntu:~/0x0F$ ./100-relationship_states_cities.py root root hbtn_0e_100_usa
+guillaume@ubuntu:~/0x0F$ cat 100-relationship_states_cities.sql | mysql -uroot -p
+Enter password: 
+id  name
+1   California
+id  name    state_id
+1   San Francisco   1
+guillaume@ubuntu:~/0x0F$
+```
+
+
+#   16. List relationship
+
+Write a script that lists all `State` objects, and corresponding `City` objects, contained in the database `hbtn_0e_101_usa`
+
+*   Your script should take 3 arguments: `mysql username`, `mysql password` and `database name`
+*   You must use the module `SQLAlchemy`
+*   The connection to your MySQL server must be to `localhost` on port `3306`
+*   You must only use one query to the database
+*   You must use the `cities` relationship for all `State` objects
+*   Results must be sorted in ascending order by `states.id` and `cities.id`
+*   Results must be displayed as they are in the example below
+*   Your code should not be executed when imported
+
+```
+<state id>: <state name>
+<tabulation><city id>: <city name>
+```
+
+```
+guillaume@ubuntu:~/0x0F$ cat 101-relationship_states_cities_list.sql | mysql -uroot -p
+guillaume@ubuntu:~/0x0F$ ./101-relationship_states_cities_list.py root root hbtn_0e_101_usa
+1: California
+    1: San Francisco
+    2: San Jose
+    3: Los Angeles
+    4: Fremont
+    5: Livermore
+2: Arizona
+    6: Page
+    7: Phoenix
+3: Texas
+    8: Dallas
+    9: Houston
+    10: Austin
+4: New York
+    11: New York
+5: Nevada
+    12: Las Vegas
+    13: Reno
+    14: Henderson
+    15: Carson City
+guillaume@ubuntu:~/0x0F$
+```
+
+
+#   17. From city
+
+Write a script that lists all `City` objects from the database `hbtn_0e_101_usa`
+
+*   Your script should take 3 arguments: `mysql username`, `mysql password` and `database name`
+*   You must use the module `SQLAlchemy`
+*   Your script should connect to a MySQL server running on `localhost` at port `3306`
+*   You must use only one query to the database
+*   You must use the `state` relationship to access to the `State` object linked to the `City` object
+*   Results must be sorted in ascending order by `cities.id`
+*   Results must be displayed as they are in the example below
+*   Your code should not be executed when imported
+
+```
+<city id>: <city name> -> <state name>
+```
+
+```
+guillaume@ubuntu:~/0x0F$ ./102-relationship_cities_states_list.py root root hbtn_0e_101_usa
+1: San Francisco -> California
+2: San Jose -> California
+3: Los Angeles -> California
+4: Fremont -> California
+5: Livermore -> California
+6: Page -> Arizona
+7: Phoenix -> Arizona
+8: Dallas -> Texas
+9: Houston -> Texas
+10: Austin -> Texas
+11: New York -> New York
+12: Las Vegas -> Nevada
+13: Reno -> Nevada
+14: Henderson -> Nevada
+15: Carson City -> Nevada
+guillaume@ubuntu:~/0x0F$ 
+```
+
+**No test cases needed**
