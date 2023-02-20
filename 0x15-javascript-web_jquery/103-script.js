@@ -12,8 +12,8 @@ $(function () {
       }
     });
   });
-  $('input#language_code').keypress(function (e) {
-    if (e.which === 13) {
+  $('input#language_code').keypress(function (key) {
+    if (key.which === 13) {
       $('input#btn_translate').click();
     }
   });
